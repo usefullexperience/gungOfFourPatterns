@@ -1,14 +1,27 @@
 package strategy;
 
+import strategy.behaviors.FlyBehavior;
+import strategy.behaviors.QuackBehavior;
+
 public abstract class Duck {
+
+    private final FlyBehavior flyBehavior;
+    private final QuackBehavior quackBehavior;
+
+    public Duck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
+        this.flyBehavior = flyBehavior;
+        this.quackBehavior = quackBehavior;
+    }
+
     public void quack() {
-        System.out.println("Quack Quack");
+        quackBehavior.quack();
     }
     public void swim() {
         System.out.println("Swimming ...");
     }
     public void fly(){
-        System.out.println("flying ...");
+        flyBehavior.fly();
     }
+
     public abstract void display();
 }
