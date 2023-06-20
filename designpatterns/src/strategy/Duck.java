@@ -5,23 +5,32 @@ import strategy.behaviors.QuackBehavior;
 
 public abstract class Duck {
 
-    private final FlyBehavior flyBehavior;
-    private final QuackBehavior quackBehavior;
+    private  FlyBehavior flyBehavior;
+    private  QuackBehavior quackBehavior;
 
     public Duck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
         this.flyBehavior = flyBehavior;
         this.quackBehavior = quackBehavior;
     }
 
-    public void quack() {
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+
+    public void performQuack() {
         quackBehavior.quack();
     }
     public void swim() {
         System.out.println("Swimming ...");
     }
-    public void fly(){
+    public void performFlay(){
         flyBehavior.fly();
     }
+
 
     public abstract void display();
 }
