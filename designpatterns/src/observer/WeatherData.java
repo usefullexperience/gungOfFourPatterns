@@ -1,8 +1,5 @@
 package observer;
 
-import observer.Observer;
-import observer.Subject;
-
 import java.util.ArrayList;
 import java.util.Collection;
 public class WeatherData implements Subject {
