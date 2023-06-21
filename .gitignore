@@ -11,6 +11,8 @@
 .mtj.tmp/
 
 # Package Files #
+.idea
+designpatterns.iml
 *.jar
 *.war
 *.nar
